@@ -1,0 +1,6 @@
+event,reader,session,work,edition,venue,action,visible,authorization,occurred
+E1,R1,S1,W1,E1,A,search,W1;W2,valid,2026-05-01T10:00
+E2,R1,S1,W1,E1,A,compare,W1;W2,valid,2026-05-01T10:05
+E3,R1,S1,W1,E1,A,open,W1,valid,2026-05-01T10:10
+E4,R2,S2,W2,E2,B,request,W2;W3,restricted,2026-05-02T11:00
+E5,R3,S3,W3,E1,B,compare,W1;W3,valid,2026-05-03T12:00

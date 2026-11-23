@@ -1,0 +1,4 @@
+work,scan,quality,permission,starts,ends
+W1,SC1,comparable,study,2025-01-01,2026-12-31
+W2,SC2,low_quality,onsite,2025-01-01,2026-06-01
+W3,SC3,comparable,restricted,2025-01-01,2026-12-31
