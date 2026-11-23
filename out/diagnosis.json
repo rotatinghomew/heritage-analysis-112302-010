@@ -1,0 +1,550 @@
+{
+  "generated_at": "2026-11-23T14:06:19",
+  "as_of": "2026-11-23",
+  "governance": {
+    "state": "controlled",
+    "notes": [
+      "P1:scope=reviewed",
+      "P2:version=active"
+    ]
+  },
+  "missing_optional_inputs": [
+    "closures.csv",
+    "substitutes.csv",
+    "constraints.csv"
+  ],
+  "event_assessments": [
+    {
+      "event_id": "E1",
+      "action": "search",
+      "authorization_state": "valid",
+      "effective": false,
+      "blocked": false,
+      "exposure": [
+        "W1",
+        "W2"
+      ],
+      "material_set": [
+        "W1",
+        "W2"
+      ],
+      "work_gates": [
+        {
+          "work": "W1",
+          "has_scan": true,
+          "has_comparable_scan": true,
+          "window_state": "covered",
+          "standing_permission": "study",
+          "passes": true,
+          "reasons": []
+        },
+        {
+          "work": "W2",
+          "has_scan": true,
+          "has_comparable_scan": false,
+          "window_state": "covered",
+          "standing_permission": "onsite",
+          "passes": false,
+          "reasons": [
+            "仅有的拍摄质量为 ['low_quality']，未达 comparable 对照质量"
+          ]
+        }
+      ],
+      "temporary_grant": false,
+      "notes": [
+        "搜索曝光：仅证明目录可见，不证明比较需求"
+      ]
+    },
+    {
+      "event_id": "E2",
+      "action": "compare",
+      "authorization_state": "valid",
+      "effective": false,
+      "blocked": false,
+      "exposure": [
+        "W1",
+        "W2"
+      ],
+      "material_set": [
+        "W1",
+        "W2"
+      ],
+      "work_gates": [
+        {
+          "work": "W1",
+          "has_scan": true,
+          "has_comparable_scan": true,
+          "window_state": "covered",
+          "standing_permission": "study",
+          "passes": true,
+          "reasons": []
+        },
+        {
+          "work": "W2",
+          "has_scan": true,
+          "has_comparable_scan": false,
+          "window_state": "covered",
+          "standing_permission": "onsite",
+          "passes": false,
+          "reasons": [
+            "仅有的拍摄质量为 ['low_quality']，未达 comparable 对照质量"
+          ]
+        }
+      ],
+      "temporary_grant": true,
+      "notes": [
+        "常设许可受限/仅馆内，本需事件级临时阅览授权；但对照闸门另有失败项，观察仍不成立，临时授权留痕",
+        "对照资格闸门未通过：有材料可见但不具可比性"
+      ]
+    },
+    {
+      "event_id": "E3",
+      "action": "open",
+      "authorization_state": "valid",
+      "effective": false,
+      "blocked": false,
+      "exposure": [
+        "W1"
+      ],
+      "material_set": [
+        "W1"
+      ],
+      "work_gates": [
+        {
+          "work": "W1",
+          "has_scan": true,
+          "has_comparable_scan": true,
+          "window_state": "covered",
+          "standing_permission": "study",
+          "passes": true,
+          "reasons": []
+        }
+      ],
+      "temporary_grant": false,
+      "notes": [
+        "单作品继续阅读，不计组合观察"
+      ]
+    },
+    {
+      "event_id": "E4",
+      "action": "request",
+      "authorization_state": "restricted",
+      "effective": false,
+      "blocked": true,
+      "exposure": [
+        "W2",
+        "W3"
+      ],
+      "material_set": [
+        "W2",
+        "W3"
+      ],
+      "work_gates": [
+        {
+          "work": "W2",
+          "has_scan": true,
+          "has_comparable_scan": false,
+          "window_state": "covered",
+          "standing_permission": "onsite",
+          "passes": false,
+          "reasons": [
+            "仅有的拍摄质量为 ['low_quality']，未达 comparable 对照质量"
+          ]
+        },
+        {
+          "work": "W3",
+          "has_scan": true,
+          "has_comparable_scan": true,
+          "window_state": "covered",
+          "standing_permission": "restricted",
+          "passes": true,
+          "reasons": []
+        }
+      ],
+      "temporary_grant": false,
+      "notes": [
+        "restricted 请求未兑现（预约/授权受限）"
+      ]
+    },
+    {
+      "event_id": "E5",
+      "action": "compare",
+      "authorization_state": "valid",
+      "effective": true,
+      "blocked": false,
+      "exposure": [
+        "W1",
+        "W3"
+      ],
+      "material_set": [
+        "W1",
+        "W3"
+      ],
+      "work_gates": [
+        {
+          "work": "W1",
+          "has_scan": true,
+          "has_comparable_scan": true,
+          "window_state": "covered",
+          "standing_permission": "study",
+          "passes": true,
+          "reasons": []
+        },
+        {
+          "work": "W3",
+          "has_scan": true,
+          "has_comparable_scan": true,
+          "window_state": "covered",
+          "standing_permission": "restricted",
+          "passes": true,
+          "reasons": []
+        }
+      ],
+      "temporary_grant": true,
+      "notes": [
+        "常设许可受限/仅馆内：靠事件级临时阅览授权成立，留痕管理"
+      ]
+    }
+  ],
+  "pair_observations_dedup": [
+    {
+      "pair": "W1|W2",
+      "session": "S1",
+      "reader": "R1",
+      "venue": "A",
+      "time_slice": "2026-05",
+      "editions": [
+        "E1"
+      ],
+      "visible_set": [
+        "W1",
+        "W2"
+      ],
+      "event_ids": [
+        "E1",
+        "E2"
+      ],
+      "effective": false,
+      "blocked": false,
+      "temporary_grant": true,
+      "gate_failures": [
+        "W2:仅有的拍摄质量为 ['low_quality']，未达 comparable 对照质量"
+      ]
+    },
+    {
+      "pair": "W2|W3",
+      "session": "S2",
+      "reader": "R2",
+      "venue": "B",
+      "time_slice": "2026-05",
+      "editions": [
+        "E2"
+      ],
+      "visible_set": [
+        "W2",
+        "W3"
+      ],
+      "event_ids": [
+        "E4"
+      ],
+      "effective": false,
+      "blocked": true,
+      "temporary_grant": false,
+      "gate_failures": [
+        "W2:仅有的拍摄质量为 ['low_quality']，未达 comparable 对照质量"
+      ]
+    },
+    {
+      "pair": "W1|W3",
+      "session": "S3",
+      "reader": "R3",
+      "venue": "B",
+      "time_slice": "2026-05",
+      "editions": [
+        "E1"
+      ],
+      "visible_set": [
+        "W1",
+        "W3"
+      ],
+      "event_ids": [
+        "E5"
+      ],
+      "effective": true,
+      "blocked": false,
+      "temporary_grant": true,
+      "gate_failures": []
+    }
+  ],
+  "pairs": {
+    "W1|W2": {
+      "pair": "W1|W2",
+      "works": [
+        "W1",
+        "W2"
+      ],
+      "classification": "spurious",
+      "reasons": [
+        "目录可见但对照闸门失败：W2:仅有的拍摄质量为 ['low_quality']，未达 comparable 对照质量",
+        "曝光来源会话：S1"
+      ],
+      "effective_sessions": [],
+      "blocked_sessions": [],
+      "exposure_only_sessions": [
+        "S1"
+      ],
+      "distinct_readers": [
+        "R1"
+      ],
+      "distinct_venues": [
+        "A"
+      ],
+      "time_slices": [
+        "2026-05"
+      ],
+      "distinct_visible_sets": [
+        [
+          "W1",
+          "W2"
+        ]
+      ],
+      "source_actions": [
+        "compare",
+        "search"
+      ],
+      "same_edition_bundle": false,
+      "temporary_grant": true,
+      "gate_failures": [
+        "W2:仅有的拍摄质量为 ['low_quality']，未达 comparable 对照质量"
+      ],
+      "substitute_links": {
+        "W1": [],
+        "W2": []
+      },
+      "has_comparable_substitute": false,
+      "requires_business_justification": null,
+      "event_ids": [
+        "E1",
+        "E2"
+      ],
+      "holdout_verdict": "not_tested"
+    },
+    "W1|W3": {
+      "pair": "W1|W3",
+      "works": [
+        "W1",
+        "W3"
+      ],
+      "classification": "supported",
+      "reasons": [
+        "有效对照观察会话：S3",
+        "观察依赖临时阅览授权，常设许可并不支持",
+        "两件作品由同一装订册承载，共现可能来自装订而非研究需求"
+      ],
+      "effective_sessions": [
+        "S3"
+      ],
+      "blocked_sessions": [],
+      "exposure_only_sessions": [],
+      "distinct_readers": [
+        "R3"
+      ],
+      "distinct_venues": [
+        "B"
+      ],
+      "time_slices": [
+        "2026-05"
+      ],
+      "distinct_visible_sets": [
+        [
+          "W1",
+          "W3"
+        ]
+      ],
+      "source_actions": [
+        "compare"
+      ],
+      "same_edition_bundle": true,
+      "temporary_grant": true,
+      "gate_failures": [],
+      "substitute_links": {
+        "W1": [],
+        "W3": []
+      },
+      "has_comparable_substitute": false,
+      "requires_business_justification": null,
+      "event_ids": [
+        "E5"
+      ],
+      "holdout_verdict": "in_sample_only_fails_holdout"
+    },
+    "W2|W3": {
+      "pair": "W2|W3",
+      "works": [
+        "W2",
+        "W3"
+      ],
+      "classification": "inconclusive",
+      "reasons": [
+        "受限/未兑现请求会话：S2，从未获得观察机会"
+      ],
+      "effective_sessions": [],
+      "blocked_sessions": [
+        "S2"
+      ],
+      "exposure_only_sessions": [],
+      "distinct_readers": [
+        "R2"
+      ],
+      "distinct_venues": [
+        "B"
+      ],
+      "time_slices": [
+        "2026-05"
+      ],
+      "distinct_visible_sets": [
+        [
+          "W2",
+          "W3"
+        ]
+      ],
+      "source_actions": [
+        "request"
+      ],
+      "same_edition_bundle": false,
+      "temporary_grant": false,
+      "gate_failures": [
+        "W2:仅有的拍摄质量为 ['low_quality']，未达 comparable 对照质量"
+      ],
+      "substitute_links": {
+        "W2": [],
+        "W3": []
+      },
+      "has_comparable_substitute": false,
+      "requires_business_justification": "组合 W2|W3 仅有 1 次未满足请求且题录中无达到 comparable 质量的替代件；需馆员登记独立业务解释（具体研究任务/不可替代原因）后才可进入补扫决策",
+      "event_ids": [
+        "E4"
+      ],
+      "holdout_verdict": "not_tested"
+    }
+  },
+  "holdout_folds": [
+    {
+      "holdout_session": "S1",
+      "selected_in_training": [
+        "W1|W3"
+      ],
+      "observed_in_holdout": [],
+      "confirmed": []
+    },
+    {
+      "holdout_session": "S2",
+      "selected_in_training": [
+        "W1|W3"
+      ],
+      "observed_in_holdout": [],
+      "confirmed": []
+    },
+    {
+      "holdout_session": "S3",
+      "selected_in_training": [],
+      "observed_in_holdout": [
+        "W1|W3"
+      ],
+      "confirmed": []
+    }
+  ],
+  "rescan_candidates": [
+    {
+      "edition": "E2",
+      "works": [
+        "W2"
+      ],
+      "gap_reasons": [
+        "W2 现有拍摄质量 ['low_quality'] 未达 comparable",
+        "W2 授权区间在 2026-11-23 已失效或区间缺报"
+      ],
+      "restrictions": [],
+      "newly_realizable": [
+        {
+          "pair": "W1|W2",
+          "delivery": "onsite_supervised",
+          "current_classification": "spurious",
+          "note": "补扫达 comparable 且授权区间续期后方可成立"
+        }
+      ],
+      "remains_blocked": [
+        {
+          "pair": "W2|W3",
+          "reason": "另一涉及作品 W3 常设受限，本册补扫后仍无法兑现完整组合",
+          "current_classification": "inconclusive"
+        }
+      ],
+      "no_gain_pairs": [],
+      "realizable_delta": 1,
+      "blocked_count": 1
+    }
+  ],
+  "constraints": {
+    "status": "indeterminate",
+    "reason": "约束输入缺报：未提供开合承受次数、馆点工时、锁定借阅与许可区域",
+    "required_fields": [
+      "venue",
+      "edition",
+      "open_close_budget",
+      "labor_hours",
+      "locked_until",
+      "license_zone"
+    ],
+    "scheduling_decision": "不得在缺报情况下锁定排期；补扫候选仅按机会增量排序"
+  },
+  "current_fulfillable_pairs": [
+    {
+      "pair": "W1|W3",
+      "fulfillable_now": false,
+      "blocked_by": [
+        "W3"
+      ],
+      "delivered_sessions": [
+        "S3"
+      ],
+      "temporary_grant": true,
+      "note": "已交付副本按原授权留痕；新请求在硬限制解除前停止配送"
+    }
+  ],
+  "horizon_risks": [
+    "W1/SC1 授权将于 2026-12-31 到期（剩余 38 天），依赖它的组合需先续期",
+    "W3/SC3 授权将于 2026-12-31 到期（剩余 38 天），依赖它的组合需先续期",
+    "组合 W2|W3 仅有 1 次未满足请求且题录中无达到 comparable 质量的替代件；需馆员登记独立业务解释（具体研究任务/不可替代原因）后才可进入补扫决策"
+  ],
+  "impact_ledger": [
+    {
+      "scenario": "某涉及作品许可临时收紧",
+      "pair": "W1|W2",
+      "research_group": "R1",
+      "status": "postponed",
+      "basis": "无交付留痕且无替代提供方式，停止后续配送"
+    },
+    {
+      "scenario": "某涉及作品许可临时收紧",
+      "pair": "W1|W3",
+      "research_group": "R3",
+      "status": "usable_as_agreed",
+      "basis": "已交付副本按原授权留痕管理，收紧不追溯"
+    },
+    {
+      "scenario": "新扫件质量未达可比要求",
+      "pair": "W1|W2",
+      "research_group": "R1",
+      "status": "postponed",
+      "basis": "新扫件未达 comparable，对照质量不成立，推迟至补扫合格"
+    },
+    {
+      "scenario": "新扫件质量未达可比要求",
+      "pair": "W2|W3",
+      "research_group": "R2",
+      "status": "postponed",
+      "basis": "新扫件未达 comparable，对照质量不成立，推迟至补扫合格"
+    }
+  ]
+}
